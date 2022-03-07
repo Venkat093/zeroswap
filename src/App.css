@@ -1,0 +1,162 @@
+.welcome-card {
+  height: 210px;
+  width: 270px;
+}
+.body {
+  max-width: 99%;
+}
+.main-header {
+  height:auto;
+  width: 100%;
+  z-index: 99;
+}
+.transfer-card
+{
+  box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253) !important;
+  background-color: #efeffd;
+  
+  
+}
+
+
+
+
+.cwallet {
+  border-color: grey !important;
+  border-radius: 50%;
+}
+
+.select {
+  border: 2px solid black;
+  outline-style: solid;
+}
+
+.btn-primary {
+  border-radius: 10px !important;
+}
+.fieldd {
+  height: 80px;
+  width: 110%;
+  display: flex;
+  position: relative;
+}
+
+
+.fieldd input {
+  height: 100%;
+  width: 80%;
+  font-size: 30px;
+  outline: none;
+  border: none;
+  background-color: #efeffd;
+}
+
+.fieldd input:focus ~ label {
+  box-shadow: inset 2px 2px 5px #babecc, inset -1px -1px 2px #ffffff73;
+}
+
+.field:nth-child(2) {
+  margin-top: 20px;
+}
+
+.fieldd span {
+  position: absolute;
+  width: 50px;
+  line-height: 50px;
+  color: white;
+}
+
+.fieldd label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  pointer-events: none;
+  color: #666666;
+  transform: translateY(-50%);
+  font-size: 22px;
+}
+
+.fieldd input:focus ~ label {
+  opacity: 0;
+}
+/* display: flex;
+justify-content: center; */
+.static-content {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+.main-contentt {
+  margin-top: 6%;
+  transform: translateX(50%);
+  display: flex;
+}
+
+.footer
+{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: 9;
+  height: 80px;
+  background-color: #f8f6f6;
+  
+}
+
+.select-field{
+  border: none !important;
+  width: 80% !important;
+  padding: 0% !important;
+}
+
+.wallet-t
+{
+  margin-bottom: 70px;
+}
+
+.wallet-t .col
+{
+  gap: 1000px;
+}
+
+.grad-btn
+{
+  /* background-image: linear-gradient(43deg, purple 0%,	#40E0D0 46%); */
+  color: white;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, purple 46%, #40E0D0 100%);
+  
+}
+ 
+
+.logo
+{
+  width: 40%; 
+  height: auto;
+  
+} 
+.main-body
+{
+  
+background-image: url("./4909528.jpg");
+height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.8;
+}  
+
+
+
+.butsiz
+{
+  font-size: 30px;
+}
+
+
+@media only screen and (max-width: 415px){
+.logo {
+width: 40%;
+height: auto;
+}
+}
