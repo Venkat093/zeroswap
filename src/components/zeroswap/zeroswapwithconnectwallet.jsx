@@ -12,6 +12,7 @@ import ERC20 from '../../Abi/ERC20.json'
 import fromExponential from 'from-exponential'
 import nft from '../../Abi/nft.json'
 import logo from "./utils/logo.png"
+import { AiOutlineArrowRight,AiOutlineArrowLeft } from 'react-icons/ai'
 let web3Modal;
 let provider;
 let selectedAccount;
@@ -223,6 +224,7 @@ const Zerobridzee = () => {
       }).catch() 
       }
   }
+  const [interchnage,setInterchange] =useState(false)
 
   return (<div className="main-body">
     <div className="main-header container bg ">
@@ -248,25 +250,39 @@ const Zerobridzee = () => {
   </div>
   <div>
   <div className="container   mt-5 ml-">
-  <b className="h4"><span> BSC to Polygon Bridge</span></b>
+  <b className="h4"><span> BSC to BRISE Bridge</span></b>
     <div className="transfer-card mt-4 d-flex flex-column wallet-t ">
     <div className="row  ">
-    <div className="col-md-7  mt-3 ml-5">
-    <div className=" h5 text-muted my-3">Binance Mainnet</div>
-    <div className=" h5 text-primary my-3"><span>ZEE ERC20 balance</span></div>
+    { interchnage === false ? (<div className="col-md-4  mt-3 ml-5">
+    <div className=" h5 text-muted my-3">Binance </div>
+    <div className=" h5 text-primary my-3"><span>Binance Native balance</span></div>
    {amount ?(<div className="h3 my-2 mb-3"><span>{amount}</span></div>) :(<div className="h3 my-2 mb-3"><span>0.000</span></div>)} 
     <div className="h6  text-primary"><span>show more</span></div>
-    </div>
-    
-    <div className="col-md-3 mt-4 ml-5 "  >
-    <div className=" h5 text-muted my-3">Polygon</div>
+    </div>):(<div className="col-md-4 mt-3 ml-5 "  >
+    <div className=" h5 text-muted my-3">Bitgert</div>
     
     
-    <div className=" h5 text-primary my-3"><span>ZEE {contractSname}20 balance</span></div>
+    <div className=" h5 text-primary my-3"><span>Brise Native balance</span></div>
     {amount ?(<div className="h3 my-2 mb-3"><span>{amount}</span></div>) :(<div className="h3 my-2 mb-3"><span>0.000</span></div>)} 
 
     <div className="h6  text-primary"><span>show more</span></div> 
-    </div>
+    </div>)}
+    <div className="col-md-2 my-5 mx-5 d-flex  justify-content">{interchnage === false ? (<div><button className="mid-btn" onClick={()=>{setInterchange(true)}}><AiOutlineArrowLeft size={30} className="arr"/> </button> </div>) :(<div><button className="mid-btn" onClick={()=>{setInterchange(false)}}><AiOutlineArrowRight   size={30} className="arr"/> </button> </div>) }   </div>
+    {interchnage === false ? ( <div className="col-md-2 mt-3 ml-5 mb-3"  >
+    <div className=" h5 text-muted my-3">Bitgert</div>
+    
+    
+    <div className=" h5 text-primary my-3"><span>Brise Native balance</span></div>
+    {amount ?(<div className="h3 my-2 mb-3"><span>{amount}</span></div>) :(<div className="h3 my-2 mb-3"><span>0.000</span></div>)} 
+
+    <div className="h6  text-primary"><span>show more</span></div> 
+    </div>) :(<div className="col-md-2  mt-3 ml-5 mb-3">
+    <div className=" h5 text-muted my-3">Binance </div>
+    <div className=" h5 text-primary my-3"><span>Binance Native balance</span></div>
+   {amount ?(<div className="h3 my-2 mb-3"><span>{amount}</span></div>) :(<div className="h3 my-2 mb-3"><span>0.000</span></div>)} 
+    <div className="h6  text-primary"><span>show more</span></div>
+    </div>)}
+   
     </div>
     </div>
     <div className="container transfer-card my-5 ">
@@ -288,7 +304,7 @@ const Zerobridzee = () => {
   </div>
     </div>
     
-  <div className="col-md-3 mt-4 mb-5 d-flex justify-content-center "><Button className="btn grad-btn "><span className="butsiz ">Transfer {"    -> "}</span></Button></div>
+  <div className="col-md-3 mt-4 mb-5 d-flex justify-content-center "><Button className="btn grad-btn " onClick={approve}  ><span className="butsiz ">Transfer {"    -> "}</span></Button></div>
     </div>
     </div>
   </div>
